@@ -1,5 +1,7 @@
 # Comandos LPIC-1
 
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
+
 ## Objetivos do site
 
 Meu objetivo é expor todos os comandos utilizados na Certificação LPIC-1, promovida pela **Linux Professional Institute**.
