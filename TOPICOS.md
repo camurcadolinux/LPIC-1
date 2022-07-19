@@ -1,5 +1,7 @@
 # Tópicos da LPIC-1
 
+## [< Voltar](README.md)
+
 - TÓPICO 101: ARQUITETURA DO SISTEMA
    1. Determinar e definir as configurações de hardware
    2. Inicialização do sistema
