@@ -12,9 +12,9 @@ Meu objetivo é expor todos os comandos utilizados na Certificação LPIC-1, pro
 
 ### 101.1: Determinar e definir as configurações de hardware
 
-Driver (Windows) = Módulo(Linux)
+_Driver (Windows) = Módulo(Linux)_
 
-Comandos de Inspeção de Hardware:
+- Comandos de Inspeção de Hardware:
 
 **LSPCI**
 ```
@@ -28,4 +28,21 @@ lspci -s [IDENTIFICADOR] -v = Detalhes de um dispositivo indicado
 lsusb = Todos os dispositivos conectados USB
 lsusb -v = Ver os detalhes dos dispositivos
 lsusb -d [BUS.DEVICE] -v = Detalhes do dispositivo conectado à porta USB indicada
+```
+
+**LSMOD**
+```
+lsmod = Exibir todos os módulos
+lsmod | grep -i [NOME] = Buscar nome de um módulo na lista
+```
+
+**MODPROBE**
+```
+modprobe [NOME] = Carregar um módulo
+modprobe -r [NOME] = Descarregar um módulo
+```
+
+**MODINFO**
+```
+modinfo [NOME] = Ver todos os detalhes de um módulo específico
 ```
