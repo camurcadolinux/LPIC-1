@@ -6,7 +6,7 @@
 
 Meu objetivo é expor todos os comandos utilizados na Certificação LPIC-1, promovida pela **Linux Professional Institute**.
 
-## [Ver todos os tópicos da LPIC-1](TOPICOS.MD)
+## [Ver todos os tópicos da LPIC-1](../TOPICOS.MD)
 
 ## TÓPICO 101: ARQUITETURA DO SISTEMA
 
