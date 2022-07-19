@@ -4,6 +4,19 @@
 
 Meu objetivo é expor todos os comandos utilizados na Certificação LPIC-1, promovida pela **Linux Professional Institute**.
 
+## Tópicos da LPIC-1
+
+- TÓPICO 101: ARQUITETURA DO SISTEMA
+- TÓPICO 102: Instalação do Linux e Gerenciamento de Pacotes
+- TÓPICO 103: GNU E COMANDOS UNIX
+- TÓPICO 104: DEVICES, LINUX SISTEMAS DE ARQUIVOS, FILESYSTEM HIERARCHY STANDARD
+- TÓPICO 105: SHELLS E SCRIPTS DO SHELL
+- TÓPICO 106: Interfaces do usuário e áreas de trabalho
+- TÓPICO 107: Tarefas Administrativas
+- TÓPICO 108: Serviços Essenciais do Sistema
+- TÓPICO 109: Fundamentos de Rede
+- TÓPICO 110: Segurança
+
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
