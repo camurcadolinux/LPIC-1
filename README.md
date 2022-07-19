@@ -16,7 +16,7 @@ Meu objetivo é expor todos os comandos utilizados na Certificação LPIC-1, pro
 
 _Driver (Windows) = Módulo(Linux)_
 
-- Comandos de Inspeção de Hardware:
+### - Comandos de Inspeção de Hardware:
 
 **LSPCI**
 ```
