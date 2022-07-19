@@ -12,8 +12,7 @@ Meu objetivo é expor todos os comandos utilizados na Certificação LPIC-1, pro
 
 ### 101.1: Determinar e definir as configurações de hardware
 
-Driver     =  Módulo
-(Windows)  =  (Linux)
+Driver (Windows) = Módulo(Linux)
 
 Comandos de Inspeção de Hardware:
 
