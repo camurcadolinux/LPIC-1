@@ -1,6 +1,8 @@
+[< Voltar](README.md)
+
 # Tópicos da LPIC-1
 
-## [< Voltar](README.md)
+![Badge Cocludo](http://img.shields.io/static/v1?label=STATUS&message=CONCLUÍDO&color=GREEN&style=for-the-badge)
 
 - TÓPICO 101: ARQUITETURA DO SISTEMA
    1. Determinar e definir as configurações de hardware
