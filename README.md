@@ -1,8 +1,8 @@
-## Welcome to GitHub Pages
+# Comandos LPIC-1
 
-You can use the [editor on GitHub](https://github.com/camurcadolinux/lpic1/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+## Objetivos do site
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Meu objetivo é expor todos os comandos utilizados na Certificação LPIC-1, promovida pela **Linux Professional Institute**.
 
 ### Markdown
 
