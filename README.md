@@ -69,7 +69,7 @@ Driver     =  Módulo
 
 Comandos de Inspeção de Hardware:
 
-'
+```
 LSPCI
 lspci = Todos os dispositivos conectados às portas PCI.
 lspci -v = Ver os detalhes dos dispositivos
@@ -79,4 +79,4 @@ LSUSB
 lsusb = Todos os dispositivos conectados USB
 lsusb -v = Ver os detalhes dos dispositivos
 lsusb -d [BUS.DEVICE] -v = Detalhes do dispositivo conectado à porta USB indicada
-'
+```
