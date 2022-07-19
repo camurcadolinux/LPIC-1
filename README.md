@@ -2,7 +2,7 @@ NAVEGAR: [Tópico 101](#101) | [Tópico 102](#102) | [Tópico 103](#103) | [Tóp
 
 # Comandos LPIC-1
 
-![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=ORANGE&style=for-the-badge) ![GitHub Org's stars](https://img.shields.io/github/stars/camilafernanda?style=social)
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=ORANGE&style=for-the-badge) ![GitHub Org's stars](https://img.shields.io/github/stars/camurcadolinux?style=social)
 
 ## Objetivos do site
 
