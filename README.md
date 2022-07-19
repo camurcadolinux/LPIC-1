@@ -6,7 +6,7 @@
 
 Meu objetivo é expor todos os comandos utilizados na Certificação LPIC-1, promovida pela **Linux Professional Institute**.
 
-## ![TÓPICOS.md]Tópicos da LPIC-1
+## ![TOPICOS.md]Tópicos da LPIC-1
 
 - TÓPICO 101: ARQUITETURA DO SISTEMA
    1. Determinar e definir as configurações de hardware
