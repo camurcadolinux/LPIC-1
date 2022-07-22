@@ -49,7 +49,7 @@ modprobe -r [NOME] = Descarregar um módulo
 modinfo [NOME] = Ver todos os detalhes de um módulo específico
 ```
 
-### - Diretórios com Informações de Hardare:
+### - Diretórios com Informações de Hardware:
 
 - Diretórios Raiz:
 
