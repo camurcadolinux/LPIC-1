@@ -48,3 +48,30 @@ modprobe -r [NOME] = Descarregar um módulo
 ```
 modinfo [NOME] = Ver todos os detalhes de um módulo específico
 ```
+
+### - Diretórios com Informações de Hardare:
+
+- Diretórios Raiz:
+
+```
+/sys
+/proc
+```
+
+- Arquivos Principais:
+
+```
+/proc/cpuinfo - Informações do Processador
+/proc/meminfo - Informações da Memória RAM
+/proc/ioports - Portas I/O em uso
+/proc/partitions - Lista de partições
+/proc/uptime - Tempo que o computador está ligado
+/proc/version - Versão do Linux utilizado
+```
+
+- Comandos para filtar informações:
+
+```
+cat - Exibe todo o arquivo
+cat | grep [termo buscado ente aspas simples] - Buscar um termo (ex:  modelname)
+```
