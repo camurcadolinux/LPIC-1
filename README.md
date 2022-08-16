@@ -75,3 +75,50 @@ modinfo [NOME] = Ver todos os detalhes de um módulo específico
 cat - Exibe todo o arquivo
 cat | grep [termo buscado ente aspas simples] - Buscar um termo (ex:  modelname)
 ```
+### 101.2: Entender o processo de boot do GNU/Linux
+
+**BIOS x UEFI**
+
+```
+BIOS - Basic Input Output System
+
+- Mais antigo
+- Primeiros 440 bytes do primeiro dispositivo de armazenamento contenham o estágio inicial do carregador de boot, chamado MBR (Master Boot Record)
+
+PASSO-A-PASSO
+
+1. POST: Identifica erros básicos de hardware
+2. BIOS ativa monitor, teclado e dispositivos de armazenamento
+3. BIOS carrega o primeiro estágio do bootloader a partir do MBR
+4. O primeiro estágio chama o segundo estágio, que apresenta as opções de boot(GRUB) e carrega o Kernel
+```
+
+```
+UEFI - Unified Extensible Firmware Interface
+
+- Mais moderno que a BIOS
+- Lê tabela de partições
+- Ignora o MBR e leva em consideração as definições armazenadas na NVRAM
+  - Indicam a localização dos aplicativos EFI, que são os carregadores de boot ou ferramentas de diagnóstico.
+- Sistemas de arquivos compatíveis:
+  - FAT12
+  - FAT16
+  - FAT32
+  - ISO-9660 (Mídias Ópticas)
+  
+  PASSO-A-PASSO
+  
+  1. POST: Identifica erros básicos de hardware
+  2. BIOS ativa monitor, teclado e dispositivos de armazenamento
+  3. BIOS lê o que está na NVRAM, localiza arquivos de partição ESP e executa o aplicativo EFI
+  4. O primeiro estágio chama o segundo estágio, que apresenta as opções de boot(GRUB) e carrega o Kernel
+  ```
+- Comandos e arquivos de Informações:
+
+```
+dmesg - Lê os logs de inicialização
+journalctl - Lê os logs de inicalização, mas aceita parâmetros
+  --boot / --dmesg - Mesmo resultado do dmesg
+  --user - Logs do usuário atual
+  -b [numero] - Busca os logs do boot, sendo 0 o boot atual, e números negativos os boots anteriores
+```
