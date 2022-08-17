@@ -77,11 +77,11 @@ cat | grep [termo buscado ente aspas simples] - Buscar um termo (ex:  modelname)
 ```
 ### 101.2: Entender o processo de boot do GNU/Linux
 
-**BIOS x UEFI**
+### **BIOS x UEFI**
+
+- BIOS | Basic Input Output System
 
 ```
-BIOS - Basic Input Output System
-
 - Mais antigo
 - Primeiros 440 bytes do primeiro dispositivo de armazenamento contenham o estágio inicial do carregador de boot, chamado MBR (Master Boot Record)
 
@@ -92,10 +92,9 @@ PASSO-A-PASSO
 3. BIOS carrega o primeiro estágio do bootloader a partir do MBR
 4. O primeiro estágio chama o segundo estágio, que apresenta as opções de boot(GRUB) e carrega o Kernel
 ```
+- UEFI | Unified Extensible Firmware Interface
 
 ```
-UEFI - Unified Extensible Firmware Interface
-
 - Mais moderno que a BIOS
 - Lê tabela de partições
 - Ignora o MBR e leva em consideração as definições armazenadas na NVRAM
@@ -122,3 +121,20 @@ journalctl - Lê os logs de inicalização, mas aceita parâmetros
   --user - Logs do usuário atual
   -b [numero] - Busca os logs do boot, sendo 0 o boot atual, e números negativos os boots anteriores
 ```
+### 101.3: Alterar níveis de execução, desligar e reiniciar
+
+- *SystemVinit ou SystemV - Mais antigo, mas ainda utilizado na inicialização*
+    Baseado em RunLevels
+    - 0 = Desligamento | /etc/rc0.d
+    - 1, s, S, single = Modo de segurança | /etc/rc1.d
+    - 2 = Multiusuário sem interface | /etc/rc2.d
+    - 3 = Multiusuário sem interface | /etc/rc3.d
+    - 4 = Personalização | /etc/rc4.d
+    - 5 = Multiusuário com interface (padrão) | /etc/rc5.d
+    - 6 = Reinicialização | /etc/rc6.d
+
+    O arquivo */etc/inittab* define qual runlevel será inicializado no boot
+    Sintaxe = id:N:initdefault:
+    
+- *SystemD*
+- *Upstart*
