@@ -137,4 +137,43 @@ journalctl - Lê os logs de inicalização, mas aceita parâmetros
     Sintaxe = id:N:initdefault:
     
 - *SystemD*
+  - Cada unidade é chamadas "unit" = Nome, tipo e arquivo de configuração
+  - Cada "unidade" tem um sufixo. Os principais:
+    - service = Recursos ativos do sistema, que podem ser inicializados e interrompindos
+      - COMANDOS POSSÍVEIS:
+        ```
+        start
+        stop
+        status
+        is-active (está ativo?)
+        enable
+        disable
+        is-enable
+        ```
+    - socket = Recebe a solicitação
+    - device = Associado ao hardware
+    - mount = Unidade de montagem (etc/fstab)
+    - automount = Unidade de montagem automática
+    - snapshot = Estado salvo do gerenciador do SystemD
+    - target = Unidade de agrupamento de unidades
+
+  Para definir o runlevel padrão:
+  ```
+  systemctl set-default [runlevel]
+  ```
+  Os arquivos de configuração das unidades ficam em:
+  ```
+  /lib/systemctl/system
+  ```
+  Você também pode usar:
+  ```
+  systemctl list-unit-files --type=[tipo]
+  ```
+  PARA GERENCIAR ENERGIA VOCÊ PODE USAR:
+  ```
+  systemctl suspend
+  systemctl hibernate
+  ```
+  PARA AJUSTES FINOS: ACPI (RECOMENDADO)
+
 - *Upstart*
