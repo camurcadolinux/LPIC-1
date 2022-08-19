@@ -10,7 +10,7 @@ Meu objetivo é expor todos os comandos utilizados na Certificação LPIC-1, pro
 
 ## [Ver todos os tópicos da LPIC-1](TOPICOS.md)
 
-## TÓPICO 101: ARQUITETURA DO SISTEMA<a name="101"></a>
+## TÓPICO 101: ARQUITETURA DO SISTEMA<a name="101"></a> ![Badge Cocludo](http://img.shields.io/static/v1?label=STATUS&message=CONCLUÍDO&color=GREEN&style=for-the-badge)
 
 ### 101.1: Determinar e definir as configurações de hardware
 
