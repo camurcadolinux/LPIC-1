@@ -177,3 +177,40 @@ journalctl - Lê os logs de inicalização, mas aceita parâmetros
   PARA AJUSTES FINOS: ACPI (RECOMENDADO)
 
 - *Upstart*
+  São scripts de inicialização localizados no:
+  ```
+  /etc/init
+  ```
+  
+  O comando principal é:
+  ```
+  initctl
+  ```
+  
+  Caso queira listar os processos:
+  ```
+  initctl list
+  ```
+  
+  *Cada opção do Upstart tem seu comando independente.*
+  
+  Para gerenciar uma unit, basta usar:
+  ```
+  status [unit]
+  start [unit]
+  stop [unit]
+  ```
+  
+  Alguns comandos do SystemV funcionam:
+  ```
+  runlevel
+  telinit
+  ```
+- Gerencie processos, desligue e reinicie.
+  O comando "clássico" para desligamento da máquina é
+  ```
+  shutdown = Ele notifica todos os usuários logados e intermedia os processos do SystemV / SystemD
+    hh:mm = Define a hora para desligar
+    +m = Desliga daqui a X minutos
+    +0 = Desliga imediatamente
+  ```
