@@ -246,3 +246,20 @@ _O particionamento de um disco é uma organização do tal, focado na perfomance
       VG (Grupo de Volumes)(RH) = 300GB  /  LV(RH) = 100GB
       VG (COMPRAS) = 300GB  /  LV(COMPRAS) = 200GB
       VG (TI) = 400GB
+
+### 102.2: Instale um gerenciador de boot
+  Os arquivos do GRUB sempre estarão no /boot/grub
+  
+  *APRENDENDO UM POUCO MAIS SOBRE O /boot*
+    Por via de regra, todos os arquivos tem o sufixo da versão do Kernel.
+    
+    A função de cada arquivo:
+      - config-VERSION = Armazena os parâmetros de configuração do Kernel. Gerado automaticamente. Não deve ser diretamente modificado!
+      - System.map-VERSION = Tabela de consulta com variavéis e símbolos.
+      - vmlinuz-VERSION = Kernel do SO (O z significa que o arquivo foi compactado).
+      - initrd.img-VERSION = Contém o Sistema de Arquivos Raiz.
+      
+  *APRENDENDO UM POUCO MAIS SOBRE O /boot/grub*
+    A função de cada arquivo:
+      - grub.cfg = Arquivo de Configuração. Após, dê o camando update-grub. Caso o arquivo não exista, dê o comando grub-mkconfig
+    Para instalar o grub, sempre use "grub-install [diretorio-de-instalacao"
