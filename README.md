@@ -295,3 +295,9 @@ O diretório de configuração das bibliotecas compartilhadas é /etc/ld.so.conf
   Aqui são incluídos os caminhos absolutos de diretórios das bibilotecas.\
 
 O "ldconfig" cria os links simbólicos para as bibliotecas e atualiza o arquivo de cache /etc/ld.so.cache.\
+
+Para ver as dependeências de uma biblioteca, use:
+
+```
+objdump -p [caminho_absoluto_da_biblioteca] | grep 'NEEDED'
+```
