@@ -10,7 +10,7 @@ Meu objetivo é expor todos os comandos utilizados na Certificação LPIC-1, pro
 
 ## [Ver todos os tópicos da LPIC-1](TOPICOS.md)
 
-## TÓPICO 101: ARQUITETURA DO SISTEMA<a name="101"></a> ![Badge Cocludo](http://img.shields.io/static/v1?label=STATUS&message=CONCLUÍDO&color=GREEN&style=for-the-badge)
+## TÓPICO 101: ARQUITETURA DO SISTEMA<a name="101"></a>
 
 ### 101.1: Determinar e definir as configurações de hardware
 
@@ -214,3 +214,35 @@ journalctl - Lê os logs de inicalização, mas aceita parâmetros
     +m = Desliga daqui a X minutos
     +0 = Desliga imediatamente
   ```
+## TÓPICO 102: INSTALAÇÃO DO LINUX E GERENCIAMENTO DE PACOTES<a name="102"></a>
+
+### 102.1: Definir o esquema de partições do Disco Rígido
+
+_O particionamento de um disco é uma organização do tal, focado na perfomance e segurança._
+
+### O esquema de partições sempre vai depender do uso daquele PC / Servidor.
+  Ex: Se você tem um servidor de logs, o diretório /var/log tem que ter a devida atenção e, dependendo do caso, ter uma partição grande apenas para ele.
+  
+### Ponto de montagem
+  Antes que um disco possa ser utilizado, ele precisa ser montado em algum diretório.
+  O diretório padrão para pontos de montagem é o /mnt.
+  Hoje o diretório padrão para mídias removíveis é /media.
+  Resumindo: Deixe os dispositivos removíveis no /media e todo o resto no /mnt
+  
+  Um diretório muito interessante de deixar separado em uma partição é o /boot (diretório lido pelo GRUB). Dessa forma, quaisquer problemas nos outros    diretórios não irão impedir a incialização do sistema
+  
+### LVM = Gerenciador de Volumes Lógicos
+  Utilizando esse gerenciador, posso criar partições em discos diferentes para formar um mesmo volume lógico.
+  Extremamente útil quando é necessário expandir o espaço sem precisar migrar todos os dados para um disco maior.
+  
+  Para ver os LV = lvscan
+  Para criar os PV = pvcreate /dev/[diretorio_do_volume]
+  Para criar os VG = vgcreate [nome] [PVs]
+  Para ativar o VG = vgchange -a [nome_do_VG]
+  Para criar um LV = lvcreate -L [tamanho_em_MB] [nome_do_VG]
+  
+  Exemplo:
+    PV (Volume Físico) = 1000GB
+      VG (Grupo de Volumes)(RH) = 300GB  /  LV(RH) = 100GB
+      VG (COMPRAS) = 300GB  /  LV(COMPRAS) = 200GB
+      VG (TI) = 400GB
