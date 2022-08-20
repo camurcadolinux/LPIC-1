@@ -250,8 +250,8 @@ _O particionamento de um disco é uma organização do tal, focado na perfomance
 ### 102.2: Instale um gerenciador de boot
   Os arquivos do GRUB sempre estarão no /boot/grub
   
-  *APRENDENDO UM POUCO MAIS SOBRE O /boot*
-    Por via de regra, todos os arquivos tem o sufixo da versão do Kernel.
+  **APRENDENDO UM POUCO MAIS SOBRE O /boot**
+    Por via de regra, todos os arquivos tem o sufixo da versão do Kernel.\
     
     A função de cada arquivo:
       - config-VERSION = Armazena os parâmetros de configuração do Kernel. Gerado automaticamente. Não deve ser diretamente modificado!
@@ -259,7 +259,39 @@ _O particionamento de um disco é uma organização do tal, focado na perfomance
       - vmlinuz-VERSION = Kernel do SO (O z significa que o arquivo foi compactado).
       - initrd.img-VERSION = Contém o Sistema de Arquivos Raiz.
       
-  *APRENDENDO UM POUCO MAIS SOBRE O /boot/grub*
-    A função de cada arquivo:
-      - grub.cfg = Arquivo de Configuração. Após, dê o camando update-grub. Caso o arquivo não exista, dê o comando grub-mkconfig
-    Para instalar o grub, sempre use "grub-install [diretorio-de-instalacao"
+  **APRENDENDO UM POUCO MAIS SOBRE O /boot/grub**
+    A função de cada arquivo:\
+      - grub.cfg = Arquivo de Configuração. Após, dê o camando update-grub. Caso o arquivo não exista, dê o comando grub-mkconfig.\
+    Para instalar o grub, sempre use "grub-install [diretorio-de-instalacao".\
+
+### 102.3: Gerenciar bibliotecas compartilhadas
+
+**O que é?**
+  Coleções de softwares que podem ser utilizados por vários porgramas diferentes.
+  
+**Bibliotecas Estáticas**
+  Incorparado ao programa no momento do vínculo.\
+  Ou seja, as bibliotecas já estão no programa.\
+  A vantagem é não precisar se preocupar com dependências.\
+  A desvantagem é que programas que utilizam bibliotecas estáticas são mais pesados.\
+
+**Bibliotecas Dinâmicas/Compartilhadas**
+  O programa apenas faz referência à biblioteca.\
+  A biblioteca deve estar instalada e sempre disponível.\
+  A vantagem é que os programas são menores e mais leves.\
+  A desvantagem é que você precisa se preicupar com as dependências.\
+
+As bibliotecas sempre ficam nos diretórios /lib, /lib32, /lib64, /usr/lib, /usr/local/lib.\
+**Para descobrir quais bibliotecas uma programa instalado necessita, basta rodar "ldd [diretorio_completo_do_binario]".**\
+
+**Padrão de nomenclatura**
+soname\
+  - Nome da biblioteca (com prefixo lib)\
+  - SO (Shared Object) - No caso de bibliotecas compartilhadas\
+  - a - No caso de bibliotecas estáticas\
+  - Número da versão da biblioteca\
+
+O diretório de configuração das bibliotecas compartilhadas é /etc/ld.so.conf.d.\
+  Aqui são incluídos os caminhos absolutos de diretórios das bibilotecas.\
+
+O "ldconfig" cria os links simbólicos para as bibliotecas e atualiza o arquivo de cache /etc/ld.so.cache.\
