@@ -303,14 +303,18 @@ objdump -p [caminho_absoluto_da_biblioteca] | grep 'NEEDED'
 ```
 ### 102.4: Usar o gerenciador de pacotes Debian
   **Você pode usar dois comandos:**
-    dpkg (Baixo Nível, Não resolve dependências)
+    - dpkg (Baixo Nível, Não resolve dependências)
+      ```
       -i = Instalar
       -r = Remover
       -P = Remover inclusive os arquivos de configuração e demais
       -l = Listar os .deb
       -reconfigure = Refazer a pós-instalação de um pacote
-      -i = Informações sobre o pacote
-    apt (Alto Nível, Resolve Dependências, Baixa de repositórios online
+      -I = Informações sobre o pacote
+      - dpkg-query -S = Descobrir qual pacote contém determinado arquivo
+      ```
+    - apt (Alto Nível, Resolve Dependências, Baixa de repositórios online
+      ```
       - Os repositórios são configurados no arquivo /etc/apt/sources.list. E os adicionais, geralmente incluídos por softwares de terceiros, ficam no diretório /etc/apt/sources.list.d
       - install = Instalar
       - remove = Remover
@@ -319,4 +323,6 @@ objdump -p [caminho_absoluto_da_biblioteca] | grep 'NEEDED'
       - search = Pesquisar pacote
       - show = Mostrar detalhes
       - -f install = Instalar dependências
-      - clean = Limpar cache de pacotes
+      - clean = Limpar cache de pacotes (/var/cache/apt/archives & /var/cache/apt/archives/partial)
+      - apt-file search = Descobrir qual pacote tem o binário X
+      ``
